@@ -2,6 +2,48 @@ import XCTest
 @testable import SwiftCartesian
 
 final class SwiftCartesianTests: XCTestCase {
+    func testMultiply2() {
+        let array2 = Self.values * Self.values
+        XCTAssertEqual(array2[0].0, true)
+        XCTAssertEqual(array2[0].1, true)
+        XCTAssertEqual(array2[1].0, true)
+        XCTAssertEqual(array2[1].1, false)
+        XCTAssertEqual(array2[2].0, false)
+        XCTAssertEqual(array2[2].1, true)
+        XCTAssertEqual(array2[3].0, false)
+        XCTAssertEqual(array2[3].1, false)
+    }
+    
+    func testMultiply3() {
+        let array3 = Self.values * Self.values * Self.values
+        XCTAssertEqual(array3[0].0.0, true)
+        XCTAssertEqual(array3[0].0.1, true)
+        XCTAssertEqual(array3[0].1, true)
+        XCTAssertEqual(array3[1].0.0, true)
+        XCTAssertEqual(array3[1].0.1, true)
+        XCTAssertEqual(array3[1].1, false)
+        
+        XCTAssertEqual(array3[2].0.0, true)
+        XCTAssertEqual(array3[2].0.1, false)
+        XCTAssertEqual(array3[2].1, true)
+        XCTAssertEqual(array3[3].0.0, true)
+        XCTAssertEqual(array3[3].0.1, false)
+        XCTAssertEqual(array3[3].1, false)
+        
+        XCTAssertEqual(array3[4].0.0, false)
+        XCTAssertEqual(array3[4].0.1, true)
+        XCTAssertEqual(array3[4].1, true)
+        XCTAssertEqual(array3[5].0.0, false)
+        XCTAssertEqual(array3[5].0.1, true)
+        XCTAssertEqual(array3[5].1, false)
+        
+        XCTAssertEqual(array3[6].0.0, false)
+        XCTAssertEqual(array3[6].0.1, false)
+        XCTAssertEqual(array3[6].1, true)
+        XCTAssertEqual(array3[7].0.0, false)
+        XCTAssertEqual(array3[7].0.1, false)
+        XCTAssertEqual(array3[7].1, false)
+    }
     func testCartesian2() {
         struct Data: Hashable {
             let x0: Bool

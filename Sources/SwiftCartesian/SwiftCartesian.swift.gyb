@@ -35,3 +35,9 @@ public func cartesian<${", ".join(param_list)}>(${", ".join(map(lambda x: "_ %s:
     %end
 }
 %end
+
+extension Array {
+    static func *<T>(lhs: Self, rhs: [T]) -> [(Element, T)] {
+        cartesian(lhs, rhs)
+    }
+}
