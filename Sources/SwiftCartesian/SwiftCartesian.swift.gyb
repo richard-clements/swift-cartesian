@@ -1,0 +1,37 @@
+import Foundation
+%{
+from environs import Env
+env = Env()
+env.read_env()
+max_arguments = int(env("MAX_ARGUMENTS"))
+
+def param_types_list(arguments):
+    return list(map(lambda x: "X%d" % (x + 1), range(0, arguments)))
+
+param_types = list(map(param_types_list, range(2, max_arguments + 1)))
+}%
+
+% for param_list in param_types:
+    %{
+    return_type = ", ".join(param_list)
+    }%
+func cartesian<${", ".join(param_list)}>(${", ".join(map(lambda x: "_ %s: [%s]" % (x.lower(), x), param_list))}) -> [(${return_type})] {
+    % for (index, type) in enumerate(param_list):
+        %{
+        tabs = "\t".join(map(lambda x: "", range(0, index + 1)))
+        map_type = "flatMap" if (index < len(param_list) - 1) else "map"
+        }%
+    ${tabs}${type.lower()}.${map_type} { ${type.lower()}e in
+    %end
+    %{
+    tabs = "\t".join(map(lambda x: "", range(0, len(param_list) + 1)))
+    }%
+    ${tabs}(${", ".join(map(lambda x: "%se" % x.lower(), param_list))})
+    % for index in reversed(range(0, len(param_list))):
+        %{
+        tabs = "\t".join(map(lambda x: "", range(0, index + 1)))
+        }%
+    ${tabs}}
+    %end
+}
+%end
