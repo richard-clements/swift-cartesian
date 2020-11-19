@@ -1,1 +1,3 @@
-# swift-cartesian
+# SwiftCartesian
+
+A description of this package.
