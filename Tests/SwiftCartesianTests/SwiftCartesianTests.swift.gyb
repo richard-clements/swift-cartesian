@@ -1,0 +1,42 @@
+import XCTest
+@testable import SwiftCartesian
+%{
+from environs import Env
+env = Env()
+env.read_env()
+max_arguments = int(env("MAX_ARGUMENTS"))
+}%
+
+final class SwiftCartesianTests: XCTestCase {
+% for i in range(2, max_arguments + 1):
+    func testCartesian${i}() {
+        struct Data: Hashable {
+            % for j in range(0, i):
+            let x${j}: Bool
+            %end
+            
+            init(${", ".join(map(lambda x: "_ x%s: Bool" % x, range(0, i)))}) {
+                % for k in range(0, i):
+                self.x${k} = x${k}
+                %end
+            }
+        }
+        
+        let product = cartesian(${", ".join(map(lambda x: "Self.values", range(0, i)))})
+        let data = Set(product.map(Data.init))
+        XCTAssertEqual(data.count, ${2 ** i})
+    }
+%end
+}
+
+extension SwiftCartesianTests {
+    static var allTests = [
+        % for i in range(2, max_arguments + 1):
+        ("testCartesian${i}", testCartesian${i}),
+        %end
+    ]
+}
+
+extension SwiftCartesianTests {
+    static let values = [true, false]
+}

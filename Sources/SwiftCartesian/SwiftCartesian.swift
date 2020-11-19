@@ -1,13 +1,13 @@
 import Foundation
 
-func cartesian<X1, X2>(_ x1: [X1], _ x2: [X2]) -> [(X1, X2)] {
+public func cartesian<X1, X2>(_ x1: [X1], _ x2: [X2]) -> [(X1, X2)] {
     x1.flatMap { x1e in
     	x2.map { x2e in
     		(x1e, x2e)
     	}
     }
 }
-func cartesian<X1, X2, X3>(_ x1: [X1], _ x2: [X2], _ x3: [X3]) -> [(X1, X2, X3)] {
+public func cartesian<X1, X2, X3>(_ x1: [X1], _ x2: [X2], _ x3: [X3]) -> [(X1, X2, X3)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.map { x3e in
@@ -16,7 +16,7 @@ func cartesian<X1, X2, X3>(_ x1: [X1], _ x2: [X2], _ x3: [X3]) -> [(X1, X2, X3)]
     	}
     }
 }
-func cartesian<X1, X2, X3, X4>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4]) -> [(X1, X2, X3, X4)] {
+public func cartesian<X1, X2, X3, X4>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4]) -> [(X1, X2, X3, X4)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -27,7 +27,7 @@ func cartesian<X1, X2, X3, X4>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4]) -
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5]) -> [(X1, X2, X3, X4, X5)] {
+public func cartesian<X1, X2, X3, X4, X5>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5]) -> [(X1, X2, X3, X4, X5)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -40,7 +40,7 @@ func cartesian<X1, X2, X3, X4, X5>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6]) -> [(X1, X2, X3, X4, X5, X6)] {
+public func cartesian<X1, X2, X3, X4, X5, X6>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6]) -> [(X1, X2, X3, X4, X5, X6)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -55,7 +55,7 @@ func cartesian<X1, X2, X3, X4, X5, X6>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4:
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7]) -> [(X1, X2, X3, X4, X5, X6, X7)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7]) -> [(X1, X2, X3, X4, X5, X6, X7)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -72,7 +72,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8]) -> [(X1, X2, X3, X4, X5, X6, X7, X8)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8]) -> [(X1, X2, X3, X4, X5, X6, X7, X8)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -91,7 +91,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8>(_ x1: [X1], _ x2: [X2], _ x3: [X3
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -112,7 +112,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9>(_ x1: [X1], _ x2: [X2], _ x3:
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -135,7 +135,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10>(_ x1: [X1], _ x2: [X2], 
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -160,7 +160,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11>(_ x1: [X1], _ x2: [
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -187,7 +187,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12>(_ x1: [X1], _ 
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -216,7 +216,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13>(_ x1: [X1
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -247,7 +247,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14>(_ x1
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -280,7 +280,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15>
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -315,7 +315,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15,
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16], _ x17: [X17]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16], _ x17: [X17]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -352,7 +352,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15,
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16], _ x17: [X17], _ x18: [X18]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16], _ x17: [X17], _ x18: [X18]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -391,7 +391,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15,
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18, X19>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16], _ x17: [X17], _ x18: [X18], _ x19: [X19]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18, X19)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18, X19>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16], _ x17: [X17], _ x18: [X18], _ x19: [X19]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18, X19)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in
@@ -432,7 +432,7 @@ func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15,
     	}
     }
 }
-func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18, X19, X20>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16], _ x17: [X17], _ x18: [X18], _ x19: [X19], _ x20: [X20]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18, X19, X20)] {
+public func cartesian<X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18, X19, X20>(_ x1: [X1], _ x2: [X2], _ x3: [X3], _ x4: [X4], _ x5: [X5], _ x6: [X6], _ x7: [X7], _ x8: [X8], _ x9: [X9], _ x10: [X10], _ x11: [X11], _ x12: [X12], _ x13: [X13], _ x14: [X14], _ x15: [X15], _ x16: [X16], _ x17: [X17], _ x18: [X18], _ x19: [X19], _ x20: [X20]) -> [(X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16, X17, X18, X19, X20)] {
     x1.flatMap { x1e in
     	x2.flatMap { x2e in
     		x3.flatMap { x3e in

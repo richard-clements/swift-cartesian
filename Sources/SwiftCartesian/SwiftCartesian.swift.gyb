@@ -15,7 +15,7 @@ param_types = list(map(param_types_list, range(2, max_arguments + 1)))
     %{
     return_type = ", ".join(param_list)
     }%
-func cartesian<${", ".join(param_list)}>(${", ".join(map(lambda x: "_ %s: [%s]" % (x.lower(), x), param_list))}) -> [(${return_type})] {
+public func cartesian<${", ".join(param_list)}>(${", ".join(map(lambda x: "_ %s: [%s]" % (x.lower(), x), param_list))}) -> [(${return_type})] {
     % for (index, type) in enumerate(param_list):
         %{
         tabs = "\t".join(map(lambda x: "", range(0, index + 1)))
